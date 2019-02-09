@@ -1,0 +1,42 @@
+[
+  {
+    "id": "2189328799",
+    "title": "C Programming Language, 2nd Edition",
+    "author_firstname": "Brian W. and Dennis M.",
+    "author_lastname": "Kerrighan and Ritchie",
+    "marketing_message": "The best programming book that you'll never use",
+    "synopsis": "The authors present the complete guide to ANSI standard C language programming. Written by the developers of C, this new version helps readers keep up with the finalized ANSI standard for C while showing how to take advantage of C's rich set of operators, economy of expression, improved control flow, and data structures. The 2/E has been completely rewritten with additional examples and problem sets to clarify the implementation of difficult language constructs. For years, C programmers have let K&R guide them to building well-structured and efficient programs. Now this same help is available to those working with ANSI compilers. Includes detailed coverage of the C language plus the official C language reference manual for at-a-glance help with syntax notation, declarations, ANSI changes, scope rules, and the list goes on and on."
+  },
+  {
+    "id": "9901829872",
+    "title": "Fundamentals of Windows Server Security",
+    "author_firstname": "James",
+    "author_lastname": "Johnson",
+    "marketing_message": null,
+    "synopsis": "What? It's possible.  Look inside to find out how"
+  },
+  {
+    "id": "8891777363",
+    "title": "iOS 12 Programming Fundamentals with Swift: Swift, Xcode, and Cocoa Basics",
+    "author_firstname": "Matt",
+    "author_lastname": "Neuburg",
+    "marketing_message": null,
+    "synopsis": "Move into iOS development by getting a firm grasp of its fundamentals, including the Xcode 10 IDE, Cocoa Touch, and the latest version of Apple’s acclaimed programming language, Swift 4.2. With this thoroughly updated guide, you’ll learn the Swift language, understand Apple’s Xcode development tools, and discover the Cocoa framework."
+  },
+  {
+    "id": "2189328799",
+    "title": "Learning Java by Building Android Games: Learn Java and Android from scratch by building six exciting games, 2nd Edition",
+    "author_firstname": "John",
+    "author_lastname": "Horton",
+    "marketing_message": "More fun than rendering a list of book titles",
+    "synopsis": "Android is one of the most popular mobile operating systems presently. It uses the most popular programming language, Java, as the primary language for building apps of all types. However, this book is unlike other Android books in that it doesn’t assume that you already have Java proficiency.\nThis new and expanded second edition of Learning Java by Building Android Games shows you how to start building Android games from scratch. The difficulty level will grow steadily as you explore key Java topics, such as variables, loops, methods, object oriented programming, and design patterns, including code and examples that are written for Java 9 and Android P.\nAt each stage, you will put what you’ve learned into practice by developing a game. You will build games such as Minesweeper, Retro Pong, Bullet Hell, and Classic Snake and Scrolling Shooter games. In the later chapters, you will create a time-trial, open-world platform game.\nBy the end of the book, you will not only have grasped Java and Android but will also have developed six cool games for the Android platform."
+  },
+  {
+    "id": "4432776190",
+    "title": "iOS 11 Programming Fundamentals with Swift: Swift, Xcode, and Cocoa Basics",
+    "author_firstname": "Matt",
+    "author_lastname": "Neuburg",
+    "marketing_message": "Almost as good as iOS 12 Programming Fundamentals! Bargain prices!",
+    "synopsis": "Move into iOS development by getting a firm grasp of its fundamentals, including the Xcode 9 IDE, Cocoa Touch, and the latest version of Apple’s acclaimed programming language, Swift 4. With this thoroughly updated guide, you’ll learn the Swift language, understand Apple’s Xcode development tools, and discover the Cocoa framework."
+  }
+]

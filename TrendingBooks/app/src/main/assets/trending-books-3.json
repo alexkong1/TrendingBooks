@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1187762418",
+    "title": "HOW TO INSTALL GOOGLE PLAY ON KINDLE FIRE: A Complete Guide on How to install google play on Kindle Devices in less than 5 Minutes for Beginners to Pro.",
+    "author_firstname": "Roland",
+    "author_lastname": "Summer",
+    "marketing_message": null,
+    "synopsis": "Kindle device are wonderful and Amazing device that can do things such as download and read books the only challenge of this device is that you can only download and install Apps that are available on amazon App store, it will make you have limited Apps on your kindle fire device. There are ways you can download more interesting Apps you need on your kindle fire device in less than 5 minutes to enable you enjoy your kindle fire device.This guide will educate you on how to install Google play store on your kindle device to gain access to unlimited apps. The instructions on in this book is very easy. Download this book by clicking on the BUY NOW to get this book."
+  },
+  {
+    "id": "3456788912",
+    "title": "Android Studio 3.0 Development Essentials - Android 8 Edition",
+    "author_firstname": "Niel",
+    "author_lastname": "Smyth",
+    "marketing_message": null,
+    "synopsis": "Fully updated for Android Studio 3.0 and Android 8, the goal of this book is to teach the skills necessary to develop Android based applications using the Android Studio Integrated Development Environment (IDE), the Android 8 Software Development Kit (SDK) and the Java programming language.\nNote: This is the Java edition of the book. If you are looking for the Kotlin edition, search for \"Kotlin / Android Studio 3.0 Development Essentials - Android 8 Edition\".\nBeginning with the basics, this book provides an outline of the steps necessary to set up an Android development and testing environment. An overview of Android Studio is included covering areas such as tool windows, the code editor and the Layout Editor tool. An introduction to the architecture of Android is followed by an in-depth look at the design of Android applications and user interfaces using the Android Studio environment. More advanced topics such as database management, content providers and intents are also covered, as are touch screen handling, gesture recognition, camera access and the playback and recording of both video and audio. This edition of the book also covers printing, transitions and cloud-based file storage.\nThe concepts of material design are also covered in detail, including the use of floating action buttons, Snackbars, tabbed interfaces, card views, navigation drawers and collapsing toolbars.\nIn addition to covering general Android development techniques, the book also includes Google Play specific topics such as implementing maps using the Google Maps Android API, and submitting apps to the Google Play Developer Console.\nOther key features of Android Studio 3 and Android 8 are also covered in detail including the Layout Editor, the ConstraintLayout and ConstraintSet classes, constraint chains and barriers, direct reply notifications and multi-window support.\nChapters also cover advanced features of Android Studio such as App Links, Instant Apps, the Android Studio Profiler and Gradle build configuration.\nAssuming you already have some Java programming experience, are ready to download Android Studio and the Android SDK, have access to a Windows, Mac or Linux system and ideas for some apps to develop, you are ready to get started. "
+  },
+  {
+    "id": "0986543221",
+    "title": "The Little LISPer, Third Edition",
+    "author_firstname": "Daniel P.",
+    "author_lastname": "Friedman",
+    "marketing_message": null,
+    "synopsis": "There are surprises in store for the diligent reader of this masterful introduction to recursion as a fundamental tool for expressing and solving problems. With wit and wisdom, The Little LISPer unfolds some of the most beautiful concepts in mathematics, computer science, and logic.\nThe authors' goal is to show that recursive thinking is first of all fun, that it is powerful, and that the programming language Lisp allows one to express ideas recursively and naturally. There are hard problems along the way, but their solution brings mastery of recursive, functional, and meta-linguistic abstractions, developing skills in the underlying creative programming in Lisp. The Little LISPer is self-contained: an interpreter for the language is developed using the tools of the book itself ."
+  },
+  {
+    "id": "2131876500",
+    "title": "Grit: The Power of Passion and Perseverance ",
+    "author_firstname": "Angela",
+    "author_lastname": "Duckworth",
+    "marketing_message": "Kindle your passion",
+    "synopsis": "In this instant New York Times bestseller, pioneering psychologist Angela Duckworth shows anyone striving to succeed—be it parents, students, educators, athletes, or business people—that the secret to outstanding achievement is not talent but a special blend of passion and persistence she calls \"grit.\"\nDrawing on her own powerful story as the daughter of a scientist who frequently noted her lack of “genius,” Duckworth, now a celebrated researcher and professor, describes her early eye-opening stints in teaching, business consulting, and neuroscience, which led to the hypothesis that what really drives success is not “genius” but a unique combination of passion and long-term perseverance.\nIn Grit, she takes readers into the field to visit cadets struggling through their first days at West Point, teachers working in some of the toughest schools, and young finalists in the National Spelling Bee. She also mines fascinating insights from history and shows what can be gleaned from modern experiments in peak performance. Finally, she shares what she’s learned from interviewing dozens of high achievers—from JP Morgan CEO Jamie Dimon to New Yorker cartoon editor Bob Mankoff to Seattle Seahawks Coach Pete Carroll.\nAmong Grit’s most valuable insights"
+  },
+  {
+    "id": "5431992874",
+    "title": "Kotlin Programming: The Big Nerd Ranch Guide",
+    "author_firstname": "Josh and David",
+    "author_lastname": "Skeen and Greenhalgh",
+    "marketing_message": "Is the ranch big, or are the nerds?",
+    "synopsis": "Kotlin is a statically typed programming language designed to interoperate with Java and fully supported by Google on the Android operating system.\n\n\n\nBased on Big Nerd Ranch's popular Kotlin Essentials course, this guide shows you how to work effectively with the Kotlin programming language through hands-on examples and clear explanations of key Kotlin concepts and foundational APIs. Written for Kotlin 1.2, this book will also introduce you to JetBrains' IntelliJ IDEA development environment.\n\n\nWhether you are an experienced Android developer looking for modern features beyond what Java offers or a new developer ready to learn your first programming language, the authors will guide you from first principles to advanced usage of Kotlin. By the end of this book, you will be empowered to create reliable, concise applications in Kotlin."
+  }
+]
