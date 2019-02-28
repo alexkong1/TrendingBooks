@@ -12,4 +12,17 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
     }
+
+    @Override
+    protected void onPostCreate(@Nullable Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        initializeUi();
+    }
+
+    private void initializeUi() {
+        getSupportFragmentManager()
+                .beginTransaction()
+                .add(R.id.main_container, BooksListFragment.newInstance())
+                .commit();
+    }
 }
