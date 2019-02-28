@@ -2,14 +2,14 @@ package com.example.trendingbooks;
 
 public class Book {
 
-    private int id;
+    private String id;
     private String title;
     private String authorFirstname;
     private String authorLastname;
     private String marketingMessage;
     private String synopsis;
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 

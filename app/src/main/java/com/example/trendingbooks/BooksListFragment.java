@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
 
 public class BooksListFragment extends Fragment {
 
@@ -37,5 +38,6 @@ public class BooksListFragment extends Fragment {
     private void initializeUi(View view) {
         RecyclerView recyclerView = view.findViewById(R.id.books_list_recycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.setAdapter(new BooksListAdapter(getContext(), BooksDataHelper.getBooks(getContext(), 1)));
     }
 }
