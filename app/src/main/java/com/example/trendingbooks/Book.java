@@ -1,11 +1,19 @@
 package com.example.trendingbooks;
 
+import android.support.annotation.Nullable;
+
+import com.google.gson.annotations.SerializedName;
+
 public class Book {
 
     private String id;
     private String title;
+    @SerializedName("author_firstname")
     private String authorFirstname;
+    @SerializedName("author_lastname")
     private String authorLastname;
+    @Nullable
+    @SerializedName("marketing_message")
     private String marketingMessage;
     private String synopsis;
 
