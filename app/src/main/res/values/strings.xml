@@ -3,4 +3,8 @@
     <string name="author_by">by %1$s</string>
     <string name="marketing_quotes">\"%1$s\"</string>
     <string name="synopsis">Synopsis</string>
+    <string name="sort_trending">trending</string>
+    <string name="sort_promoted">promoted</string>
+    <string name="sort_author">author</string>
+    <string name="sort_title">title</string>
 </resources>

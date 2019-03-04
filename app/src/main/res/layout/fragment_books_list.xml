@@ -11,19 +11,19 @@
         <android.support.design.widget.TabItem
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
-            android:text="Trending" />
+            android:text="@string/sort_trending" />
         <android.support.design.widget.TabItem
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
-            android:text="Promoted" />
+            android:text="@string/sort_promoted" />
         <android.support.design.widget.TabItem
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
-            android:text="Author" />
+            android:text="@string/sort_author" />
         <android.support.design.widget.TabItem
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
-            android:text="Title" />
+            android:text="@string/sort_title" />
 
     </android.support.design.widget.TabLayout>
 
