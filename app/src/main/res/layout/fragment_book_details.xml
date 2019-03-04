@@ -44,6 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
         android:text="@string/synopsis"
         android:textColor="@color/colorPrimary"
         android:textSize="16sp"
