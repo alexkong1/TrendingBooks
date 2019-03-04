@@ -9,7 +9,6 @@ public class MainActivity extends AppCompatActivity implements BooksListAdapter.
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main);
     }
 
@@ -30,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements BooksListAdapter.
     public void selectBook(Book book) {
         getSupportFragmentManager()
                 .beginTransaction()
+                .addToBackStack(null)
                 .replace(R.id.main_container, BookDetailsFragment.newInstance(book))
                 .commit();
     }

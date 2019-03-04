@@ -52,6 +52,11 @@ public class BooksListAdapter extends RecyclerView.Adapter<BooksListAdapter.Book
         return books.size();
     }
 
+    public void updateBooks(List<Book> books) {
+        this.books = books;
+        notifyDataSetChanged();
+    }
+
     class BooksViewHolder extends RecyclerView.ViewHolder {
 
         TextView title;
