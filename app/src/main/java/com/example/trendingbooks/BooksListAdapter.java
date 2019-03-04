@@ -16,11 +16,13 @@ public class BooksListAdapter extends RecyclerView.Adapter<BooksListAdapter.Book
 
     private Context context;
     private List<Book> books = new ArrayList<>();
+    private BookSelector selector;
 
-    public BooksListAdapter(Context context, List<Book> books) {
+    public BooksListAdapter(Context context, List<Book> books, BookSelector selector) {
         super();
         this.context = context;
         this.books = books;
+        this.selector = selector;
     }
 
     @NonNull
@@ -41,6 +43,8 @@ public class BooksListAdapter extends RecyclerView.Adapter<BooksListAdapter.Book
             viewHolder.marketing.setText(context.getString(R.string.marketing_quotes, book.getMarketingMessage()));
         } else viewHolder.marketing.setVisibility(View.GONE);
         viewHolder.synopsis.setText(book.getSynopsis());
+
+        viewHolder.itemView.setOnClickListener(v -> selector.selectBook(book));
     }
 
     @Override
@@ -62,5 +66,9 @@ public class BooksListAdapter extends RecyclerView.Adapter<BooksListAdapter.Book
             marketing = itemView.findViewById(R.id.book_marketing);
             synopsis = itemView.findViewById(R.id.book_synopsis);
         }
+    }
+
+    public interface BookSelector {
+        void selectBook(Book book);
     }
 }

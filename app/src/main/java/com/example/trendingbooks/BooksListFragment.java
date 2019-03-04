@@ -38,6 +38,7 @@ public class BooksListFragment extends Fragment {
     private void initializeUi(View view) {
         RecyclerView recyclerView = view.findViewById(R.id.books_list_recycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.setAdapter(new BooksListAdapter(getContext(), BooksDataHelper.getBooks(getContext(), 1)));
+        recyclerView.setAdapter(new BooksListAdapter(getContext(), BooksDataHelper.getBooks(getContext(), 1),
+                ((MainActivity) getActivity())));
     }
 }

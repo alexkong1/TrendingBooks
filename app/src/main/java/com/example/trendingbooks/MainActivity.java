@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements BooksListAdapter.BookSelector {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -23,6 +23,14 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager()
                 .beginTransaction()
                 .add(R.id.main_container, BooksListFragment.newInstance())
+                .commit();
+    }
+
+    @Override
+    public void selectBook(Book book) {
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.main_container, BookDetailsFragment.newInstance(book))
                 .commit();
     }
 }
