@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -45,6 +46,9 @@ public class BooksListAdapter extends RecyclerView.Adapter<BooksListAdapter.Book
         viewHolder.synopsis.setText(book.getSynopsis());
 
         viewHolder.itemView.setOnClickListener(v -> selector.selectBook(book));
+        viewHolder.favorite.setOnClickListener(v -> {
+            viewHolder.favorite.setSelected(!viewHolder.favorite.isSelected());
+        });
     }
 
     @Override
@@ -63,6 +67,7 @@ public class BooksListAdapter extends RecyclerView.Adapter<BooksListAdapter.Book
         TextView author;
         TextView marketing;
         TextView synopsis;
+        ImageView favorite;
 
         public BooksViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -70,6 +75,7 @@ public class BooksListAdapter extends RecyclerView.Adapter<BooksListAdapter.Book
             author = itemView.findViewById(R.id.book_author);
             marketing = itemView.findViewById(R.id.book_marketing);
             synopsis = itemView.findViewById(R.id.book_synopsis);
+            favorite = itemView.findViewById(R.id.book_favorite);
         }
     }
 

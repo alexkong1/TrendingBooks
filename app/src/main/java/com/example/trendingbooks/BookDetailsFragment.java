@@ -49,4 +49,10 @@ public class BookDetailsFragment extends Fragment {
             ((TextView) root.findViewById(R.id.book_details_synopsis)).setText(book.getSynopsis());
         }
     }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if (getActivity() != null) ((MainActivity) getActivity()).setShowFavorites(false);
+    }
 }
