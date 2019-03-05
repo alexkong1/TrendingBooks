@@ -1,4 +1,4 @@
-package com.example.trendingbooks;
+package com.example.trendingbooks.ui;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -9,12 +9,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.trendingbooks.MainApplication;
+import com.example.trendingbooks.R;
+import com.example.trendingbooks.data.Book;
 import com.google.gson.Gson;
 
 
 public class BookDetailsFragment extends Fragment {
 
     public static final String ARG_BOOK_DATA = "book_data";
+    private Book book;
 
     public static BookDetailsFragment newInstance(Book book) {
         BookDetailsFragment frag = new BookDetailsFragment();
@@ -39,7 +43,7 @@ public class BookDetailsFragment extends Fragment {
 
     private void initializeUi(View root) {
         if (getArguments() != null) {
-            Book book = new Gson().fromJson(getArguments().getString(ARG_BOOK_DATA), Book.class);
+            book = new Gson().fromJson(getArguments().getString(ARG_BOOK_DATA), Book.class);
 
             ((TextView) root.findViewById(R.id.book_details_title)).setText(book.getTitle());
             ((TextView) root.findViewById(R.id.book_details_author)).setText(book.getAuthorLastname());
@@ -54,5 +58,13 @@ public class BookDetailsFragment extends Fragment {
     public void onDestroy() {
         super.onDestroy();
         if (getActivity() != null) ((MainActivity) getActivity()).setShowFavorites(false);
+    }
+
+    public void updateFavorite(boolean isFavorited) {
+        if (getActivity() != null && book != null) {
+            ((MainApplication) getActivity().getApplication())
+                    .getBooksHelper()
+                    .updateFavorites(book.getId(), isFavorited);
+        }
     }
 }

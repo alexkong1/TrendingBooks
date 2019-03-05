@@ -1,4 +1,4 @@
-package com.example.trendingbooks;
+package com.example.trendingbooks.data;
 
 import android.support.annotation.Nullable;
 

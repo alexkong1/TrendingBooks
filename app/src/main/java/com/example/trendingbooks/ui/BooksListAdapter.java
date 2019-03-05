@@ -1,4 +1,4 @@
-package com.example.trendingbooks;
+package com.example.trendingbooks.ui;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -9,6 +9,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.trendingbooks.R;
+import com.example.trendingbooks.data.Book;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,13 +20,13 @@ public class BooksListAdapter extends RecyclerView.Adapter<BooksListAdapter.Book
 
     private Context context;
     private List<Book> books = new ArrayList<>();
-    private BookSelector selector;
+    private BookItemClicker clicker;
 
-    public BooksListAdapter(Context context, List<Book> books, BookSelector selector) {
+    public BooksListAdapter(Context context, List<Book> books, BookItemClicker clicker) {
         super();
         this.context = context;
         this.books = books;
-        this.selector = selector;
+        this.clicker = clicker;
     }
 
     @NonNull
@@ -45,9 +48,12 @@ public class BooksListAdapter extends RecyclerView.Adapter<BooksListAdapter.Book
         } else viewHolder.marketing.setVisibility(View.GONE);
         viewHolder.synopsis.setText(book.getSynopsis());
 
-        viewHolder.itemView.setOnClickListener(v -> selector.selectBook(book));
+        viewHolder.itemView.setOnClickListener(v -> clicker.selectBook(book));
+
+        viewHolder.favorite.setSelected(clicker.isFavorited(book.getId()));
         viewHolder.favorite.setOnClickListener(v -> {
             viewHolder.favorite.setSelected(!viewHolder.favorite.isSelected());
+            clicker.favoriteBook(book.getId(), viewHolder.favorite.isSelected());
         });
     }
 
@@ -79,7 +85,9 @@ public class BooksListAdapter extends RecyclerView.Adapter<BooksListAdapter.Book
         }
     }
 
-    public interface BookSelector {
+    public interface BookItemClicker {
         void selectBook(Book book);
+        void favoriteBook(String bookId, boolean isFavorited);
+        boolean isFavorited(String bookId);
     }
 }

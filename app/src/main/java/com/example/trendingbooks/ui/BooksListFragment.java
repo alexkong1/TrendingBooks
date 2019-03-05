@@ -1,4 +1,4 @@
-package com.example.trendingbooks;
+package com.example.trendingbooks.ui;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -11,9 +11,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.util.ArrayList;
+import com.example.trendingbooks.R;
+import com.example.trendingbooks.data.Book;
+import com.example.trendingbooks.data.BooksDataHelper;
+
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 public class BooksListFragment extends Fragment {
