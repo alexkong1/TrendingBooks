@@ -7,4 +7,5 @@
     <string name="sort_promoted">promoted</string>
     <string name="sort_author">author</string>
     <string name="sort_title">title</string>
+    <string name="favorite">Favorite</string>
 </resources>

@@ -63,4 +63,12 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/book_synopsis_title" />
 
+    <ImageView
+        android:id="@+id/book_favorite"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/selector_favorite"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
 </android.support.constraint.ConstraintLayout>
