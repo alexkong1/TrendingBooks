@@ -23,44 +23,35 @@ public class BooksDataHelper {
     private Context context;
     private HashSet<String> favorites = new HashSet<>();
     private final static String FAVORITES_FILE = "favorites.set";
+    private static final String[] TEST_JSON = {"trending-books-1.json", "trending-books-2.json", "trending-books-3.json"};
 
     public BooksDataHelper(Context context) {
         this.context = context;
         loadFavorites();
     }
 
-    public static List<Book> getBooks(Context context, int setNumber) {
+    public static List<Book> getBooks(Context context) {
 
-        String path;
         String json = null;
         List<Book> result = new ArrayList<>();
 
-        switch (setNumber) {
-            case 3:
-                path = "trending-books-3.json";
-                break;
-            case 2:
-                path = "trending-books-2.json";
-                break;
-            case 1:
-            default:
-                path = "trending-books-1.json";
-                break;
-        }
+        for (int i = 0; i < TEST_JSON.length; i++) {
 
-        try {
-            InputStream is = context.getAssets().open(path);
-            int size = is.available();
-            byte[] buffer = new byte[size];
-            is.read(buffer);
-            is.close();
-            json = new String(buffer, "UTF-8");
-        } catch (IOException e) {
-            Log.e("LOADING BOOKS", e.getMessage());
-        }
+            try {
+                InputStream is = context.getAssets().open(TEST_JSON[i]);
+                int size = is.available();
+                byte[] buffer = new byte[size];
+                is.read(buffer);
+                is.close();
+                json = new String(buffer, "UTF-8");
+            } catch (IOException e) {
+                Log.e("LOADING BOOKS", e.getMessage());
+            }
 
-        if (json != null) result = new Gson().fromJson(json, new TypeToken<List<Book>>() {
-        }.getType());
+            if (json != null)
+                result.addAll(new Gson().fromJson(json, new TypeToken<List<Book>>() {
+                }.getType()));
+        }
 
         return result;
     }

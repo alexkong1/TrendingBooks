@@ -44,7 +44,7 @@ public class BooksListFragment extends Fragment {
     }
 
     private void initializeUi(View view) {
-        books = BooksDataHelper.getBooks(getContext(), 1);
+        books = BooksDataHelper.getBooks(getContext());
 
         RecyclerView recyclerView = view.findViewById(R.id.books_list_recycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -77,7 +77,7 @@ public class BooksListFragment extends Fragment {
                         break;
                     case 0:
                     default:
-                        books = BooksDataHelper.getBooks(getContext(), 1);
+                        books = BooksDataHelper.getBooks(getContext());
                         break;
                 }
                 if (recyclerView.getAdapter() != null)

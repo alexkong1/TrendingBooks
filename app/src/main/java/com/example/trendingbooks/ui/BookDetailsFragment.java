@@ -46,10 +46,31 @@ public class BookDetailsFragment extends Fragment {
             book = new Gson().fromJson(getArguments().getString(ARG_BOOK_DATA), Book.class);
 
             ((TextView) root.findViewById(R.id.book_details_title)).setText(book.getTitle());
-            ((TextView) root.findViewById(R.id.book_details_author)).setText(book.getAuthorLastname());
-            if (book.getMarketingMessage() != null)
-                ((TextView) root.findViewById(R.id.book_details_marketing)).setText(book.getTitle());
-            else root.findViewById(R.id.book_details_marketing).setVisibility(View.GONE);
+
+            String author;
+            if (book.getAuthorLastname().contains(" and ")) {
+                String[] lastNames = book.getAuthorLastname().split(" and ");
+                String[] firstNames = book.getAuthorFirstname().split(" and ");
+                StringBuilder authorBuilder = new StringBuilder();
+
+                for (int i = 0; i < lastNames.length; i++) {
+                    authorBuilder.append(firstNames[i]);
+                    authorBuilder.append(" ");
+                    authorBuilder.append(lastNames[i]);
+                    if (i != lastNames.length - 1) authorBuilder.append(" and ");
+                }
+                author = authorBuilder.toString();
+            } else author = book.getAuthorFirstname() + " " + book.getAuthorLastname();
+
+            ((TextView) root.findViewById(R.id.book_details_author)).setText(
+                    getContext().getString(R.string.author_by, author));
+
+            if (book.getMarketingMessage() != null) {
+                root.findViewById(R.id.book_details_marketing).setVisibility(View.VISIBLE);
+                ((TextView) root.findViewById(R.id.book_details_marketing))
+                        .setText(getContext().getString(R.string.marketing_quotes,
+                                book.getMarketingMessage()));
+            } else root.findViewById(R.id.book_details_marketing).setVisibility(View.GONE);
             ((TextView) root.findViewById(R.id.book_details_synopsis)).setText(book.getSynopsis());
         }
     }
